@@ -1,0 +1,226 @@
+
+  .box{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    row-gap: 100px;
+    position: absolute;
+    top: 30%;
+    left: 0;
+  }
+  .product-card {
+    position: relative;
+    /*APPEAR EFFFECT*/
+    opacity: 0;
+   transform: translateY(20px);
+    max-width: 355px;
+    border-radius: 15px;
+    padding: 20px 30px 30px 30px;
+    background-color: black;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    overflow: hidden;
+    height: 520px;
+
+  }
+  /*.product-card:hover{
+    box-shadow: 10px 5px 5px black;
+  }*/
+  .product-card .logo-cart{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .product-card .logo-cart img{
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+  }
+  .product-card .logo-cart i{
+    font-size: 27px;
+    color: white;
+    text-decoration: none!important;
+    fill: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  .product-card .logo-cart i::before,.product-card .logo-cart i::after,.product-card .logo-cart i:hover{
+    text-decoration: none!important;
+  }
+  .product-card .logo-cart i:hover{
+    color: #333;
+  }
+  .product-card .main-images{
+    width: 300px;
+  }
+  .product-card .main-images img{
+    position: relative;
+    height: 310px;
+  }
+  /*.product-card .main-images img{
+    position: absolute;
+    
+    object-fit: cover;
+    transform: rotate(18deg);
+    left: 12px;
+    top: -40px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  .product-card .main-images div{
+    width: 350px;
+    height: 310px;
+    background-color: transparent;
+    
+  }
+  .jordandunklow{
+    z-index: 67;
+    position: absolute;
+    left: 80%;
+    top: 10%;
+    width: 200px;
+    height: 200px;
+  }*/
+  .product-card .main-images img.active{
+    opacity: 1;
+  }
+  .product-card .shoe-details .shoe_name{
+    position: absolute;
+    bottom: 65px;
+    font-size: 18px;
+    
+    font-family: 'Rubik', sans-serif;
+     width: 200px;
+    color: white;
+  }
+  .product-card .shoe-details{
+    position: absolute;
+    bottom: 4px;
+  }
+  .product-card .shoe-details p{
+    position: absolute;
+    bottom: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+    color: #333;
+    width: 200px;
+  }
+  .product-card .shoe-details .stars i{
+    margin: 0 -1px;
+    color: #333;
+    text-decoration: none!important;
+  }
+  .product-card .color-price .color-option{
+    display: flex;
+    align-items: center;
+  }
+  .color-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .color-price .price{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .color-price .price .price_num{
+    font-size: 19px;
+    font-weight: 600;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    position: absolute;
+    left: 220px;
+    bottom: 60px;
+  }
+  .color-price .price .pricscrossed{
+    position: absolute;
+    left: 220px;
+    bottom: 40px;
+    font-size: 0px;
+    font-weight: 600;
+    margin-top: -4px;
+    color: #333;
+    
+    text-decoration-thickness: 2px;
+    font-family: 'Rubik', sans-serif;
+  }
+  /*.product-card .button{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    border-radius: 25px;
+    margin-top: 30px;
+    overflow: hidden;
+  }
+  .product-card .button .button-layer{
+    position: absolute;
+    height: 100%;
+    width: 300%;
+    left: -100%;
+    background-image: linear-gradient(135deg, rgb(28,28,28), grey,rgb(28,28,28), black);
+    transition: all 0.4s ease;
+    border-radius: 25PX;
+  }
+  .product-card .button:hover .button-layer{
+    left: 0;
+  }
+  .product-card .button button{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+  }*/
+  #product-card .btcard{
+    background-color: rgb(28,28,28);
+    border: none;
+    outline: none;
+    width: 200px;
+    border-radius: 4px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+    padding: 20px 40px;
+    font-size: 12px;
+    color: white;
+    z-index: 6;
+  }
+  .product-card.advert{
+    display: flex;
+    justify-content: center;
+  }
+  .inside-ad{
+    width: 400px;
+    background-color: black;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .inside-ad img{
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+@media screen and (max-width: 480px){
+  .box{
+    position: absolute;
+    top: 20%;
+    padding-left: 16px;
+    row-gap: 20px;
+    column-gap: 0px;
+  }
+  .product-card{
+    border-radius: 10px;
+    background-color: /*#0b0b0e*/ black !important;
+  }
+  
+}
