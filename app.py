@@ -200,10 +200,10 @@ def create_checkout_session():
             line_items=line_items,
             invoice_creation={"enabled": True},
             mode='payment',
-            success_url=YOUR_DOMAIN + '/success-payment',
+            success_url= '',
             cancel_url=YOUR_DOMAIN + '/shop',
             shipping_address_collection={
-            'allowed_countries': ['US', 'CA'],  # Specify the allowed countries for shipping
+            'allowed_countries': ['FR', 'DE','GR','FI','IT','LU','MC','PT','RO','SI','ES','SE','CH','TR','GB','BE','NL','FO'],  # Specify the allowed countries for shipping
             },
             phone_number_collection={"enabled": True},
             shipping_options=[
@@ -257,3 +257,4 @@ def delete_from_cart():
 
 if __name__ == '__main__':
     app.run(port=4242)
+
