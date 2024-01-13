@@ -159,14 +159,14 @@
       <div class = "product-div">
           <div class = "product-div-left">
               <div class = "img-container">
-                  <img src = "{{ url_for('static', filename='/img/photo3B.png') }}" alt = "watch">
+                  <img src = "{{ url_for('static', filename='/img/photo7.png') }}" alt = "watch">
               </div>
               <div class = "hover-container">
-                  <div><img src = "{{ url_for('static', filename='/img/photo3.png') }}"></div>
-                  <div><img src = "{{ url_for('static', filename='/img/photo3B.png') }}"></div>
-                  <div><img src = "{{ url_for('static', filename='/img/photo3E.png') }}"></div>
-                  <div><img src = "{{ url_for('static', filename='/img/photo3F.png') }}"></div>
-                  <div><img src = "{{ url_for('static', filename='/img/photo3B.png') }}" class="imgspecial"></div>
+                  <div><img src = "{{ url_for('static', filename='/img/photo7.png') }}"></div>
+                  <div><img src = "{{ url_for('static', filename='/img/photo7B.webp') }}"></div>
+                  <div><img src = "{{ url_for('static', filename='/img/photo7C.png') }}"></div>
+                  <div><img src = "{{ url_for('static', filename='/img/photo7D.png') }}"></div>
+                  <div><img src = "{{ url_for('static', filename='/img/photo7E.png') }}" class="imgspecial"></div>
               </div>
           </div>
           <div class = "product-div-right">
@@ -192,19 +192,19 @@
                         <i class="bx bx-chevron-down"></i>
                     </div>
                     <ul class="options">
-                        <li class="option"  onclick="setProduct('product11')">
+                        <li class="option"  onclick="setProduct('product31')">
                             <span class="option-text">Size XS</span>
                         </li>
-                        <li class="option"  onclick="setProduct('product12')">
+                        <li class="option"  onclick="setProduct('product32')">
                             <span class="option-text">Size S</span>
                         </li>
-                        <li class="option"  onclick="setProduct('product13')">
+                        <li class="option"  onclick="setProduct('product33')">
                             <span class="option-text">Size M</span>
                         </li>
-                        <li class="option"  onclick="setProduct('product14')">
+                        <li class="option"  onclick="setProduct('product34')">
                             <span class="option-text">Size L</span>
                         </li>
-                        <li class="option"  onclick="setProduct('product15')">
+                        <li class="option"  onclick="setProduct('product35')">
                             <span class="option-text">Size XL</span>
                         </li>
                     </ul>
@@ -220,24 +220,6 @@
 </div>
 
 <script>
-  const buttons = document.querySelectorAll(".button-container button");
-const paymentLink = document.getElementById("payment-link");
-
-const links = {
-  XS: "https://buy.stripe.com/14k02Rd06flgaBO29l",
-  S: "https://buy.stripe.com/bIY6rf9NU0qmeS44hu",
-  M: "https://buy.stripe.com/aEUeXL0dkc948tGcO1",
-  L: "https://buy.stripe.com/14keXLe4ac94bFSdTr",
-  XL: "https://buy.stripe.com/aEU9Dr2lsgpkeS49BQ",
-};
-
-buttons.forEach(button => {
-  button.addEventListener("click", () => {
-      const size = button.textContent;
-      paymentLink.href = links[size];
-      paymentLink.textContent = `Add to cart in size ${size}`;
-  });
-});
 //===================================DYNAMIC CART AJUSTMENTS 
 // Your JavaScript code...
 
@@ -253,25 +235,25 @@ document.getElementById('payment-link').textContent = `Add to cart in size ${siz
 function dynamic() {
 // Customize this function based on your cart implementation
 switch (selectedProduct) {
-case 'product11':
+case 'product31':
   toggleCart();
-  addToCart('product11');
+  addToCart('product31');
   break;
-case 'product12':
+case 'product32':
   toggleCart();
-  addToCart('product12');
+  addToCart('product32');
   break;
-case 'product13':
+case 'product33':
   toggleCart();
-  addToCart('product13');
+  addToCart('product33');
   break;
-case 'product14':
+case 'product34':
   toggleCart();
-  addToCart('product14');
+  addToCart('product34');
   break;
-case 'product15':
+case 'product35':
   toggleCart();
-  addToCart('product15');
+  addToCart('product35');
   break;
 // Add more cases for other products as needed
 default:

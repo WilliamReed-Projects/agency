@@ -286,7 +286,7 @@
         <a href="product/product1">
           <div class=" product-card n1 polo t-shirt" onclick="open()" data-name="polo">
             <div class="logo-cart">
-              <img src="{{ url_for('static', filename='/img/Stone-Island-icon.png') }}" style="width: 120px;" alt="logo">
+              <img src="{{ url_for('static', filename='/img/logo/Stone-Island-icon.png') }}" style="width: 120px;" alt="logo">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M5 22h14c1.103 0 2-.897 2-2V9a1 1 0 0 0-1-1h-3V7c0-2.757-2.243-5-5-5S7 4.243 7 7v1H4a1 1 0 0 0-1 1v11c0 1.103.897 2 2 2zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v1H9V7zm-4 3h2v2h2v-2h6v2h2v-2h2l.002 10H5V10z"></path></svg>
             </div>
             <div class="main-images">
@@ -308,7 +308,7 @@
       <a href="/product/product2">
         <div class=" product-card n1 polo t-shirt" onclick="open()" data-name="polo">
           <div class="logo-cart">
-            <img src="{{ url_for('static', filename='/img/logocp.webp') }}" style="width: 120px;" alt="logo">
+            <img src="{{ url_for('static', filename='/img/logo/logocp.webp') }}" style="width: 120px;" alt="logo">
              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M5 22h14c1.103 0 2-.897 2-2V9a1 1 0 0 0-1-1h-3V7c0-2.757-2.243-5-5-5S7 4.243 7 7v1H4a1 1 0 0 0-1 1v11c0 1.103.897 2 2 2zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v1H9V7zm-4 3h2v2h2v-2h6v2h2v-2h2l.002 10H5V10z"></path></svg>
           </div>
           <div class="main-images">
@@ -326,28 +326,71 @@
           </div>
          </div>
       </a>
-      <!--PRODUCT CARD
       <a href="/product/product3">
         <div class=" product-card n1 polo t-shirt" onclick="open()" data-name="polo">
           <div class="logo-cart">
-            <img src="{{ url_for('static', filename='/img/Stone-Island-icon.png') }}" style="width: 120px;" alt="logo">
+            <img src="{{ url_for('static', filename='/img/logo/polologo.png') }}" style="width: 70px;" alt="logo">
              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M5 22h14c1.103 0 2-.897 2-2V9a1 1 0 0 0-1-1h-3V7c0-2.757-2.243-5-5-5S7 4.243 7 7v1H4a1 1 0 0 0-1 1v11c0 1.103.897 2 2 2zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v1H9V7zm-4 3h2v2h2v-2h6v2h2v-2h2l.002 10H5V10z"></path></svg>
           </div>
           <div class="main-images">
             <img id="blue" class="blue active" src="{{ url_for('static', filename='/img/photo3.png') }}"   style="margin-left: 12px; border-radius: 3px; margin-top: 0px;margin-bottom: 10px; width: 90%;height: 90%;"alt="blue">
           </div>
           <div class="shoe-details">
-            <span class="shoe_name">STONE ISLAND</span>
-            <p>Cargo Jogger</p>
+            <span class="shoe_name">Polo Ralph Lauren</span>
+            <p>Black Zip Hoodie</p>
+          </div>
+          <div class="color-price v1">
+            <div class="price">
+              <span class="pricscrossed">Size M</span>
+              <span class="price_num">130,00 €</span>
+            </div>
+          </div>
+         </div>
+      </a>
+      <!--PRODUCT CARD-->
+      <a href="/product/product4">
+        <div class=" product-card n1 stussy hoodie"  data-name="stussy">
+          <div class="logo-cart">
+            <img src="{{ url_for('static', filename='/img/logo/thenorthfacelogo.jpg') }}" alt="logo"style="width: 50px;">
+             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M5 22h14c1.103 0 2-.897 2-2V9a1 1 0 0 0-1-1h-3V7c0-2.757-2.243-5-5-5S7 4.243 7 7v1H4a1 1 0 0 0-1 1v11c0 1.103.897 2 2 2zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v1H9V7zm-4 3h2v2h2v-2h6v2h2v-2h2l.002 10H5V10z"></path></svg>
+          </div>
+          <div class="main-images">
+            <img id="blue" class="blue active" src="{{ url_for('static', filename='/img/photo4.png') }}" alt="blue" style="margin-left: 15px; border-radius: 3px; margin-top: 10px;margin-bottom: 10px;">
+          </div>
+          <div class="shoe-details">
+            <span class="shoe_name">The North Face</span>
+            <p>Puffer Jacket 700</p>
+          </div>
+          <div class="color-price v1">
+            <div class="price">
+              <span class="pricscrossed">239,00 €</span>
+              <span class="price_num">239,00 €</span>
+            </div>
+          </div>
+          </div>
+       </a>
+       <!--PRODUCT CARD-->
+       <a href="/product/product5">
+        <div class=" product-card n1 polo t-shirt" onclick="open()" data-name="polo">
+          <div class="logo-cart">
+            <img src="{{ url_for('static', filename='/img/logo/logocp.webp') }}" style="width: 120px;" alt="logo">
+            <i class='bx bx-shopping-bag'></i>
+          </div>
+          <div class="main-images">
+            <img id="blue" class="blue active" src="{{ url_for('static', filename='/img/photo5.png') }}"  style="margin-left: 10px; border-radius: 3px; margin-top: 10px;margin-bottom: 10px;" alt="blue">
+          </div>
+          <div class="shoe-details">
+            <span class="shoe_name">CP Company</span>
+            <p>White Sweats</p>
           </div>
           <div class="color-price v1">
             <div class="price">
               <span class="pricscrossed"></span>
-              <span class="price_num">120,00 €</span>
+              <span class="price_num">130,00 €</span>
             </div>
           </div>
          </div>
-      </a>-->
+      </a>
        <!--PRODUCT CARD
        <a href="/product/product4">
         <div class=" product-card n1 stussy hoodie"  data-name="stussy">
@@ -370,15 +413,36 @@
           </div>
           </div>
        </a>-->
-       <!--PRODUCT CARD-->
-       <a href="/product/product5">
-        <div class=" product-card n1 stussy hoodie"  data-name="stussy">
+       <a href="/product/product6">
+        <div class=" product-card n1 polo t-shirt" onclick="open()" data-name="polo">
           <div class="logo-cart">
-            <img src="{{ url_for('static', filename='/img/arclogo.jpg') }}" alt="logo" style="width: 120px;">
+            <img src="{{ url_for('static', filename='/img/logo/polologo.png') }}" style="width: 70px;" alt="logo">
              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M5 22h14c1.103 0 2-.897 2-2V9a1 1 0 0 0-1-1h-3V7c0-2.757-2.243-5-5-5S7 4.243 7 7v1H4a1 1 0 0 0-1 1v11c0 1.103.897 2 2 2zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v1H9V7zm-4 3h2v2h2v-2h6v2h2v-2h2l.002 10H5V10z"></path></svg>
           </div>
           <div class="main-images">
-            <img id="blue" class="blue active" src="{{ url_for('static', filename='/img/photo5.png') }}" alt="blue" style="margin-left: 40px; border-radius: 3px; margin-top: 10px;margin-bottom: 10px;">
+            <img id="blue" class="blue active" src="{{ url_for('static', filename='/img/photo6.png') }}"   style="margin-left: 0px; border-radius: 3px; margin-top: 0px;margin-bottom: 10px; width: 90%;height: 90%;"alt="blue">
+          </div>
+          <div class="shoe-details">
+            <span class="shoe_name">Polo Ralph Lauren</span>
+            <p>Black Joggers</p>
+          </div>
+          <div class="color-price v1">
+            <div class="price">
+              <span class="pricscrossed">Size S</span>
+              <span class="price_num">130,00 €</span>
+            </div>
+          </div>
+        </div>
+      </a>
+       <!--PRODUCT CARD-->
+       <a href="/product/product7">
+        <div class=" product-card n1 stussy hoodie"  data-name="stussy">
+          <div class="logo-cart">
+            <img src="{{ url_for('static', filename='/img/logo/arclogo.jpg') }}" alt="logo" style="width: 120px;">
+             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M5 22h14c1.103 0 2-.897 2-2V9a1 1 0 0 0-1-1h-3V7c0-2.757-2.243-5-5-5S7 4.243 7 7v1H4a1 1 0 0 0-1 1v11c0 1.103.897 2 2 2zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v1H9V7zm-4 3h2v2h2v-2h6v2h2v-2h2l.002 10H5V10z"></path></svg>
+          </div>
+          <div class="main-images">
+            <img id="blue" class="blue active" src="{{ url_for('static', filename='/img/photo7.png') }}" alt="blue" style="margin-left: 0px; border-radius: 3px; margin-top: 10px;margin-bottom: 10px;">
           </div>
           <div class="shoe-details">
             <span class="shoe_name">Arc'teryx</span>
@@ -414,11 +478,11 @@
           </div>
           </div>
        </a>-->
-       <!--PRODUCT CARD-->
-       <a href="/product/product7">
+       <!--PRODUCT CARD
+       <a href="/product/product8">
         <div class=" product-card n1 stussy hoodie"  data-name="stussy">
           <div class="logo-cart">
-            <img src="{{ url_for('static', filename='/img/Stone-Island-icon.png') }}" alt="logo" style="width: 120px;">
+            <img src="{{ url_for('static', filename='/img/logo/Stone-Island-icon.png') }}" alt="logo" style="width: 120px;">
              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M5 22h14c1.103 0 2-.897 2-2V9a1 1 0 0 0-1-1h-3V7c0-2.757-2.243-5-5-5S7 4.243 7 7v1H4a1 1 0 0 0-1 1v11c0 1.103.897 2 2 2zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v1H9V7zm-4 3h2v2h2v-2h6v2h2v-2h2l.002 10H5V10z"></path></svg>
           </div>
           <div class="main-images">
@@ -435,7 +499,7 @@
             </div>
           </div>
           </div>
-       </a>
+       </a>-->
        <!--PRODUCT CARD
        <a href="/product/product8">
         <div class=" product-card n1 stussy hoodie"  data-name="stussy">
@@ -457,37 +521,14 @@
           </div>
           </div>
        </a> -->
-       <!--PRODUCT CARD-->
        <a href="/product/product9">
         <div class=" product-card n1 stussy hoodie"  data-name="stussy">
           <div class="logo-cart">
-            <img src="{{ url_for('static', filename='/img/thenorthfacelogo.jpg') }}" alt="logo"style="width: 50px;">
+            <img src="{{ url_for('static', filename='/img/logo/image1.gif') }}" alt="logo" style="width: 120px;">
              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M5 22h14c1.103 0 2-.897 2-2V9a1 1 0 0 0-1-1h-3V7c0-2.757-2.243-5-5-5S7 4.243 7 7v1H4a1 1 0 0 0-1 1v11c0 1.103.897 2 2 2zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v1H9V7zm-4 3h2v2h2v-2h6v2h2v-2h2l.002 10H5V10z"></path></svg>
           </div>
           <div class="main-images">
-            <img id="blue" class="blue active" src="{{ url_for('static', filename='/img/photo8.png') }}" alt="blue" style="margin-left: 40px; border-radius: 3px; margin-top: 10px;margin-bottom: 10px;">
-          </div>
-          <div class="shoe-details">
-            <span class="shoe_name">The North Face</span>
-            <p>Puffer Jacket 700</p>
-          </div>
-          <div class="color-price v1">
-            <div class="price">
-              <span class="pricscrossed">239,00 €</span>
-              <span class="price_num">239,00 €</span>
-            </div>
-          </div>
-          </div>
-       </a>
-       <!--PRODUCT CARD-->
-       <a href="/product/product10">
-        <div class=" product-card n1 stussy hoodie"  data-name="stussy">
-          <div class="logo-cart">
-            <img src="{{ url_for('static', filename='/img/image1.gif') }}" alt="logo" style="width: 120px;">
-             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M5 22h14c1.103 0 2-.897 2-2V9a1 1 0 0 0-1-1h-3V7c0-2.757-2.243-5-5-5S7 4.243 7 7v1H4a1 1 0 0 0-1 1v11c0 1.103.897 2 2 2zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v1H9V7zm-4 3h2v2h2v-2h6v2h2v-2h2l.002 10H5V10z"></path></svg>
-          </div>
-          <div class="main-images">
-            <img id="blue" class="blue active" src="{{ url_for('static', filename='/img/photo10.png') }}" alt="blue" style="margin-left: 40px; border-radius: 3px; margin-top: 10px;margin-bottom: 10px;">
+            <img id="blue" class="blue active" src="{{ url_for('static', filename='/img/photo9.png') }}" alt="blue" style="margin-left: 40px; border-radius: 3px; margin-top: 10px;margin-bottom: 10px;">
           </div>
           <div class="shoe-details">
             <span class="shoe_name">Corteiz</span>
@@ -524,49 +565,7 @@
           </div>
        </a>-->
        <!--PRODUCT CARD-->
-       <a href="/product/product12">
-        <div class=" product-card n1 polo t-shirt" onclick="open()" data-name="polo">
-          <div class="logo-cart">
-            <img src="{{ url_for('static', filename='/img/polologo.png') }}" style="width: 70px;" alt="logo">
-             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M5 22h14c1.103 0 2-.897 2-2V9a1 1 0 0 0-1-1h-3V7c0-2.757-2.243-5-5-5S7 4.243 7 7v1H4a1 1 0 0 0-1 1v11c0 1.103.897 2 2 2zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v1H9V7zm-4 3h2v2h2v-2h6v2h2v-2h2l.002 10H5V10z"></path></svg>
-          </div>
-          <div class="main-images">
-            <img id="blue" class="blue active" src="{{ url_for('static', filename='/img/photo12.png') }}"   style="margin-left: 12px; border-radius: 3px; margin-top: 0px;margin-bottom: 10px; width: 90%;height: 90%;"alt="blue">
-          </div>
-          <div class="shoe-details">
-            <span class="shoe_name">Polo Ralph Lauren</span>
-            <p>Black Zip Hoodie</p>
-          </div>
-          <div class="color-price v1">
-            <div class="price">
-              <span class="pricscrossed">Size M</span>
-              <span class="price_num">99,00 €</span>
-            </div>
-          </div>
-         </div>
-      </a>
       <!--PRODUCT CARD-->
-      <a href="/product/product13">
-        <div class=" product-card n1 polo t-shirt" onclick="open()" data-name="polo">
-          <div class="logo-cart">
-            <img src="{{ url_for('static', filename='/img/polologo.png') }}" style="width: 70px;" alt="logo">
-             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M5 22h14c1.103 0 2-.897 2-2V9a1 1 0 0 0-1-1h-3V7c0-2.757-2.243-5-5-5S7 4.243 7 7v1H4a1 1 0 0 0-1 1v11c0 1.103.897 2 2 2zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v1H9V7zm-4 3h2v2h2v-2h6v2h2v-2h2l.002 10H5V10z"></path></svg>
-          </div>
-          <div class="main-images">
-            <img id="blue" class="blue active" src="{{ url_for('static', filename='/img/photo13.png') }}"   style="margin-left: 12px; border-radius: 3px; margin-top: 0px;margin-bottom: 10px; width: 90%;height: 90%;"alt="blue">
-          </div>
-          <div class="shoe-details">
-            <span class="shoe_name">Polo Ralph Lauren</span>
-            <p>Black Joggers</p>
-          </div>
-          <div class="color-price v1">
-            <div class="price">
-              <span class="pricscrossed">Size S</span>
-              <span class="price_num">130,00 €</span>
-            </div>
-          </div>
-        </div>
-      </a>
       <!--PRODUCT CARD
       <a href="/product/product14">
         <div class=" product-card n1 polo t-shirt" onclick="open()" data-name="polo">
@@ -765,7 +764,28 @@
           </div>
           </div>
       </a>-->
-       
+       <!--PRODUCT CARD
+      <a href="/product/product3">
+        <div class=" product-card n1 polo t-shirt" onclick="open()" data-name="polo">
+          <div class="logo-cart">
+            <img src="{{ url_for('static', filename='/img/Stone-Island-icon.png') }}" style="width: 120px;" alt="logo">
+             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M5 22h14c1.103 0 2-.897 2-2V9a1 1 0 0 0-1-1h-3V7c0-2.757-2.243-5-5-5S7 4.243 7 7v1H4a1 1 0 0 0-1 1v11c0 1.103.897 2 2 2zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v1H9V7zm-4 3h2v2h2v-2h6v2h2v-2h2l.002 10H5V10z"></path></svg>
+          </div>
+          <div class="main-images">
+            <img id="blue" class="blue active" src="{{ url_for('static', filename='/img/photo3.png') }}"   style="margin-left: 12px; border-radius: 3px; margin-top: 0px;margin-bottom: 10px; width: 90%;height: 90%;"alt="blue">
+          </div>
+          <div class="shoe-details">
+            <span class="shoe_name">STONE ISLAND</span>
+            <p>Cargo Jogger</p>
+          </div>
+          <div class="color-price v1">
+            <div class="price">
+              <span class="pricscrossed"></span>
+              <span class="price_num">120,00 €</span>
+            </div>
+          </div>
+         </div>
+      </a>-->
 
         
     </div>

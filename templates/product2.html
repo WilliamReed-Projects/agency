@@ -29,6 +29,17 @@
             background-color: black !important;
             height: 120%!important;
         }
+        .img-container img{
+        width: 390px !important;
+        margin: 0 auto;
+        }
+        .hover-container{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+         }
         
         
     </style>
@@ -149,7 +160,7 @@
       <div class = "product-div">
           <div class = "product-div-left">
               <div class = "img-container">
-                  <img src = "{{ url_for('static', filename='/img/photo1B.png') }}" alt = "watch">
+                  <img src = "{{ url_for('static', filename='/img/photo2.png') }}" alt = "watch">
               </div>
               <div class = "hover-container">
                   <div><img src = "{{ url_for('static', filename='/img/photo2.png') }}"></div>
@@ -268,25 +279,25 @@ document.getElementById('payment-link').textContent = `Add to cart in size ${siz
 function dynamic() {
 // Customize this function based on your cart implementation
 switch (selectedProduct) {
-case 'product1':
+case 'product6':
   toggleCart();
-  addToCart('product1');
+  addToCart('product6');
   break;
-case 'product2':
+case 'product7':
   toggleCart();
-  addToCart('product2');
+  addToCart('product7');
   break;
-case 'product3':
+case 'product8':
   toggleCart();
-  addToCart('product3');
+  addToCart('product8');
   break;
-case 'product4':
+case 'product9':
   toggleCart();
-  addToCart('product4');
+  addToCart('product9');
   break;
-case 'product5':
+case 'product10':
   toggleCart();
-  addToCart('product5');
+  addToCart('product10');
   break;
 // Add more cases for other products as needed
 default:
