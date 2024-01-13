@@ -642,7 +642,7 @@ body{
     }
     .shop{
       display: block;
-      rotate: -90deg;
+      rotate: -90deg !important;
       font-family: "Space Mono", sans-serif;
       font-weight: 400;
       left: 10px;
