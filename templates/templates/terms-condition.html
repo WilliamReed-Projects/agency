@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dropout</title>
+    <!--LINK CSS-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/scrollbar.css') }}">
+    <!--LINK ICONS-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <!--LINK GSAP + JAVASCRIPT-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+  <!--------------------------CART SYSTEM))))))))))))))))))))))))))-->
+  <section class="container" id="cart-system">
+    <div class="boxx b1"> 
+      <p onclick="toggleCart()"><svg xmlns="http://www.w3.org/2000/svg" height="20" width="16" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path fill="#312f2f" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></p>
+      <h2>Shopping Cart</h2>
+    </div>
+    <div class="boxx b2">
+      <div id="cart-section">
+          <ul id="cart-list">
+
+          </ul>
+      </div>
+      <div>
+        <button onclick="clearCart()" class="clear-cart">Clear Cart</button>
+      </div>
+    </div>
+    <div class="boxx b3">
+      <form id="cart-form" action="/create-checkout-session" method="POST" class="cart-form">
+         <button type="submit" id="checkout-button" class="checkout-button">Checkout</button>
+      </form>
+    </div>
+  </section>
+    <!--==================Headers===================-->
+    <!--Pre-Header-->
+    <div class="pre-header">
+        <p>Introducing DROPOUT Inc., low prices big brands®. DROPOUT Clothing © 2024</p>
+    </div>
+    <!--PHONE HEADER-->
+  <nav class="phonenav">
+    <div class="sectionlogo2">
+      <span>DRP</span>
+      <img src="{{ url_for('static', filename='/img/logoheader.png') }}" alt="">
+      <span>2024</span>
+    </div>
+    <input type="checkbox" id="click">
+    <label for="click" class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <ul>
+        <!--<li class="drop-nav-phone-li"><a href="/shop" class="drop-nav-phone">Shop Drop</a></li>
+        <li>
+            <p onclick="toggleCart()"  class="carttoggle"><svg xmlns="http://www.w3.org/2000/svg" height="26" width="18" viewBox="0 0 576 512" style="visibility: visible;"><path fill="#ffffff" d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>  Shopping Cart</p>
+        </li>
+        <li class="information-nav"><a href="/">Information</a></li>
+        <li><a class="active" href="/terms-and-conditions">Terms of Conditions</a></li>
+        <li><a class="active" href="/shipping-and-returns">Shipping and Returns</a></li>
+        <li><a class="active" href="/privacy-policy">Privacy-Policy</a></li>-->
+        <a href="/" class="home">
+        <span class="icon"><i class="fa-solid fa-house" style="color: #ffffff;"></i></span> Home
+      </a>
+      <a href="#" class="cart">
+        <span class="icon"  onclick="toggleCart()"><i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i></span> <p onclick="toggleCart()">Shopping Cart</p>
+      </a>
+      <a href="/shop" class="another-container">
+        <span class="icon"><i class="fa-solid fa-bag-shopping" style="color: #ffffff;"></i></span> Shop
+      </a>
+        <div class="small-container">
+          <a href="/terms-and-conditions">Terms</a>
+          <a href="/shipping-and-returns">Shipping</a>
+          <a href="/privacy-policy">Privacy</a>
+        </div>
+    </ul>
+    <!--<div class="phone-container">
+        <a href="#" class="home">
+            <span class="icon">🏠</span> Home
+        </a>
+        <a href="#" class="cart">
+            <span class="icon">🛒</span> Shopping Cart
+        </a>
+        <a href="#" class="another-container">
+            Another Container
+        </a>
+
+         Nested small container inside phone container 
+        <div class="small-container">
+          <a href="#">Terms</a>
+          <a href="#">Shipping</a>
+          <a href="#">Privacy</a>
+      </div>
+    </div>-->
+  </nav> 
+    <!--Header-->
+    <div class="black-color"></div>
+    <header  id="header" class="absolute">
+        <span class="title">DROPOUT</span>
+        <a href="/" class="linkhomelogo">
+          <div class="sectionlogo">
+            <span>DROPOUT</span>
+            <img src="{{ url_for('static', filename='/img/logoheader.png') }}" alt="">
+            <span>2024</span>
+          </div>
+        </a>
+        <div class="nav-better">
+          <a href="/shop" class="drop" style="color: black;">DROP 2 OCTOBER</a>
+          <a href="/" class="infodrop">INFO</a>
+          <div class="dropdown">
+            <button class="dropbtn">MORE 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <li><a href="/terms-and-conditions">Terms of Service</a></li>
+              <li><a href="/shipping-and-returns">Shipping and Returns</a></li>
+              <li><a href="/privacy-policy">Privacy-Policy</a></li>
+            </div>
+          </div>
+        </div>
+</header>
+    <section class="information-shipping">
+        <p class="title-ship">Terms of service</p>
+    <span> <p>Overview</p>
+        This website is operated by DROPOUT. Throughout the site, the terms “we”, “us” and “our” refer to DROPOUT. DROPOUT offers this website, including all information, tools and services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here.
+By visiting our site and/or purchasing something from us, you engage in our “Service” and agree to be bound by the following terms and conditions (“Terms of Service”, “Terms”), including those additional terms and conditions and policies referenced herein and/or elsewhere on this website. These Terms of Service apply to all users of the site, including without limitation users who are browsers, vendors, customers, merchants, and/or contributors of content.
+Please read these Terms of Service carefully before accessing or using our website. By accessing or using any part of the site, you agree to be bound by these Terms of Service. If you do not agree to all the terms and conditions of this agreement, then you may not access the website or use any services. If these Terms of Service are considered an offer, acceptance is expressly limited to these Terms of Service.
+Any new features or tools which are added to the current store shall also be subject to the Terms of Service. You can review the most current version of the Terms of Service at any time on this page. We reserve the right to update, change or replace any part of these Terms of Service by posting updates and/or changes to our website. It is your responsibility to check this page periodically for changes. Your continued use of or access to the website following the posting of any changes constitutes acceptance of those changes.
+Our store is hosted on PythonAnywhere.
+    <div> <p>General conditions</p>
+        We reserve the right to refuse service to anyone for any reason at any time.
+You understand that your content (not including credit card information), may be transferred unencrypted and involve (a) transmissions over various networks; and (b) changes to conform and adapt to technical requirements of connecting networks or devices. Credit card information is always encrypted during transfer over networks.
+You agree not to reproduce, duplicate, copy, sell, resell or exploit any portion of the Service, use of the Service, or access to the Service or any contact on the website through which the service is provided, without express written permission by us.
+The headings used in this agreement are included for convenience only and will not limit or otherwise affect these Terms.</div>
+<div> <p>Payments</p>
+    All payments for items on the DROPOUT online shop are through STRIPE, and include postage. For made to order and custom commissions we will invoice you directly and require a imidiate payment.</div>
+    <div> <p>Intellectual property</p>
+        DRP owns the Intellectual Property Rights to all products on the DROPOUT shop, as well as all the products on www.DROPOUT.com and the @the_official_DROPOUT social media channels. No products on these sites or otherwise can be reproduced or resold without the permission of DROPOUT.</div>
+        <div> <p>Accuracy, completeness and timeliness of information</p>
+            We are not responsible if information made available on this site is not accurate, complete or current. The material on this site is provided for general information only and should not be relied upon or used as the sole basis for making decisions without consulting primary, more accurate, more complete or more timely sources of information. Any reliance on the material on this site is at your own risk.
+This site may contain certain historical information. Historical information, necessarily, is not current and is provided for your reference only. We reserve the right to modify the contents of this site at any time, but we have no obligation to update any information on our site. You agree that it is your responsibility to monitor changes to our site.</div>
+            <div> <p>Modifications to the service and prices</p>
+                Prices for our products are subject to change without notice.
+We reserve the right at any time to modify or discontinue the Service (or any part or content thereof) without notice at any time. We shall not be liable to you or to any third-party for any modification, price change, suspension or discontinuance of the Service.</div>
+<div><p>Products or services</p>Certain products or services may be available exclusively online through the website. These products or services may have limited quantities and are subject to return or exchange only according to our Return Policy.
+    We have made every effort to display as accurately as possible the colours and images of our products that appear at the store. We cannot guarantee that your computer monitor's display of any colour will be accurate.
+    We reserve the right, but are not obligated, to limit the sales of our products or Services to any person, geographic region or jurisdiction. We may exercise this right on a case-by-case basis. We reserve the right to limit the quantities of any products or services that we offer. All descriptions of products or product pricing are subject to change at any time without notice, at the sole discretion of us. We reserve the right to discontinue any product at any time. Any offer for any product or service made on this site is void where prohibited.
+    We do not warrant that the quality of any products, services, information, or other material purchased or obtained by you will meet your expectations, or that any errors in the Service will be corrected.</div>
+<div><p>Accuracy of billing and account information</p>We reserve the right to refuse any order you place with us. We may, in our sole discretion, limit or cancel quantities purchased per person, per household or per order. These restrictions may include orders placed by or under the same customer account, the same credit card, and/or orders that use the same billing and/or shipping address. In the event that we make a change to or cancel an order, we may attempt to notify you by contacting the e-mail and/or billing address/phone number provided at the time the order was made. We reserve the right to limit or prohibit orders that, in our sole judgment, appear to be placed by dealers, resellers or distributors.
+    You agree to provide current, complete and accurate purchase and account information for all purchases made at our store. You agree to promptly update your account and other information, including your email address and credit card numbers and expiration dates, so that we can complete your transactions and contact you as needed.
+    For more detail, please review our Returns Policy.</div>
+<div><p>Personal information</p>Your submission of personal information through the store is governed by our Privacy Policy. For more detail, please review our Privacy Policy.</div>
+    <div><p>Governing law</p>These Terms of Service and any separate agreements whereby we provide you Services shall be governed by, and construed in accordance with, the laws of the United Kingdom.
+    </div>
+    <div><p>Changes to terms of service</p>You can review the most current version of the Terms of Service at any time at this page.
+        We reserve the right, at our sole discretion, to update, change or replace any part of these Terms of Service by posting updates and changes to our website. It is your responsibility to check our website periodically for changes. Your continued use of or access to our website or the Service following the posting of any changes to these Terms of Service constitutes acceptance of those changes.</div>
+    <div><p>Contact information</p>Questions about the Terms of Service should be sent to us at info.DROPOUT.shopping@gmail.com.</div></span>
+</section>
+    
+    <style>
+        .title-ship{
+            font-size: 40px;
+            color: white;
+            z-index: 4;
+            position: relative;
+            top: 0%;
+            left: 28%;
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .information-shipping{
+            position: absolute;
+            top: 20%;
+            left: 4%;
+            color: white;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+        }
+        .information-shipping span{
+            position: relative;
+            left: 0%;
+            color: white;
+            font-size: 19px;
+        }
+        .information-shipping span p{
+            text-decoration: underline;
+        }
+        .information-shipping div{
+            position: relative;
+            top: 15%;
+            left: 0%;
+            color: white;
+            font-size: 19px;
+        }
+        .information-shipping div p{
+            text-decoration: underline;
+        }
+        input[type="checkbox" i] {
+    background-color: initial;
+    cursor: default;
+    appearance: auto;
+    box-sizing: border-box;
+    margin: 3px 3px 3px 4px;
+    padding: initial;
+    border: initial;
+    display: none;
+}
+        @media  screen and (max-width:480px) {
+            .title-ship{
+                left: 2%;
+            }
+        }
+     </style>
+     <script src="{{ url_for('static', filename='js/cart.js') }}"></script>
+</body>
+</html>
