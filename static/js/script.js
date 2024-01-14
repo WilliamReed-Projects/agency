@@ -93,7 +93,7 @@ const generateResponse = (chatElement) => {
         messageElement.textContent = data.choices[0].message.content.trim();
     }).catch(() => {
         messageElement.classList.add("error");
-        messageElement.textContent = "Thank you for reaching out! Kindly send me an email detailing the issue at info.trendz.shopping@gmail.com We will review your message and get back to you as soon as possible. Looking forward to assisting you further through email.";
+        messageElement.textContent = "Thank you for reaching out! Kindly send me an email detailing the issue at contact@shop-dropout.com We will review your message and get back to you as soon as possible. Looking forward to assisting you further through email.";
     }).finally(() => chatbox.scrollTo(0, chatbox.scrollHeight));
 }
 

@@ -77,17 +77,48 @@ const productNames = {
   'product3': 'Stone Island Black Sweat Size M',
   'product4': 'Stone Island Black Sweat Size L',
   'product5': 'Stone Island Black Sweat Size XL',
-  'product6': 'Stone Island Crewneck Black Sweat Size XS',
-  'product7': 'Stone Island Crewneck Black Sweat Size XS',
-  'product8': 'Stone Island Crewneck Black Sweat Size XS',
-  'product9': 'Stone Island Crewneck Black Sweat Size XS',
-  'product10': 'Stone Island Crewneck Black Sweat Size XS',
-  'product11': 'Stone Island Crewneck Black Sweat Size XS',
-  'product12': 'Stone Island Crewneck Black Sweat Size XS',
-  'product13': 'Stone Island Crewneck Black Sweat Size XS',
-  'product14': 'Stone Island Crewneck Black Sweat Size XS',
-  'product15': 'Stone Island Crewneck Black Sweat Size XS',
-  'product16': 'Stone Island Crewneck Black Sweat Size XS',
+  'product6': 'CP Company Black Jacket Size XS',
+  'product7': 'CP Company Black Jacket Size S',
+  'product8': 'CP Company Black Jacket Size M',
+  'product9': 'CP Company Black Jacket Size L',
+  'product10': 'CP Company Black Jacket Size XL',
+  'product11': 'Polo Ralph Lauren Zip Hoodie XS',
+  'product12': 'Polo Ralph Lauren Zip Hoodie S',
+  'product13': 'Polo Ralph Lauren Zip Hoodie M',
+  'product14': 'Polo Ralph Lauren Zip Hoodie L',
+  'product15': 'Polo Ralph Lauren Zip Hoodie XL',
+  'product16': 'The North Face 330 Jacket XS',
+  'product17': 'The North Face 330 Jacket S',
+  'product18': 'The North Face 330 Jacket M',
+  'product19': 'The North Face 330 Jacket L',
+  'product20': 'The North Face 330 Jacket XL',
+  'product21': 'CP Company White Sweat XS',
+  'product22': 'CP Company White Sweat S',
+  'product23': 'CP Company White Sweat M',
+  'product24': 'CP Company White Sweat L',
+  'product25': 'CP Company White Sweat XL',
+  'product26': 'Polo Ralph Lauren Zip Joggers XS',
+  'product27': 'Polo Ralph Lauren Zip Joggers S',
+  'product28': 'Polo Ralph Lauren Zip Joggers M',
+  'product29': 'Polo Ralph Lauren Zip Joggers L',
+  'product30': 'Polo Ralph Lauren Zip Joggers XL',
+  'product31': 'Arcterix Beta Jacket',
+  'product32': 'Arcterix Beta Jacket',
+  'product33': 'Arcterix Beta Jacket',
+  'product34': 'Arcterix Beta Jacket',
+  'product35': 'Arcterix Beta Jacket',
+  'product36': 'Arcterix Beta Jacket',
+  'product37': 'Stone Island T-Shirt',
+  'product38': 'Stone Island T-Shirt',
+  'product39': 'Stone Island T-Shirt',
+  'product40': 'Stone Island T-Shirt',
+  'product41': 'Stone Island T-Shirt',
+  'product42': 'Corteiz T-Shirt XS',
+  'product43': 'Corteiz T-Shirt S',
+  'product44': 'Corteiz T-Shirt M',
+  'product45': 'Corteiz T-Shirt L',
+  'product46': 'Corteiz T-Shirt XL',
+
   // Add more products as needed
 };
 
@@ -157,11 +188,16 @@ updateCartDisplay();
 function toggleCart() {
   var cartContainer = document.getElementById('cart-system');
   if (cartContainer) {
-      cartContainer.style.display = cartContainer.style.display === 'none' ? 'grid' : 'none';
+    console.log('Before click:', cartContainer.style.display);
+    
+    cartContainer.style.display = cartContainer.style.display === 'none' ? 'grid' : 'none';
+    
+    console.log('After click:', cartContainer.style.display);
   } else {
-      console.error('Cart container not found.');
+    console.error('Cart container not found.');
   }
 }
+
 
 //Function to update the shopping cart content (you may need to customize this)
 function updateCartContent(cartItems) {
