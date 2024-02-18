@@ -1,20 +1,118 @@
-
-body{
-    overflow-x: hidden;
-    background-color: black !important;
-    touch-action: pan-y;
+body {
+  position: absolute;
+  margin: 0;
+  height: 200%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  background-color: #0f0f0f  !important; /* Very dark grey background */
+}
+.container25{
+  position: absolute;
+  top: 37%;
+  width: 100%;
+  height: 30%;
+  background-color: #0f0f0f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .container23 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px; /* Adjust this width as needed */
+    background-color: black; /* Darker background color */
+    padding: 20px;
+    border-radius: 10px;
   }
+  .image-container img {
+    border-radius: 6px;
+    width: 150px; /* Adjust this width as needed */
+    height: auto;
+    transition: filter 0.3s; /* Smooth transition effect */
+    margin-right: 10px; /* Space between images */
+  }
+    
+  
+}
+
+.container24{
+  position: absolute;
+  top: 7%;
+  width: 100%;
+  height: 30%;
+  background-color: #0f0f0f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container23 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1300px; /* Adjust this width as needed */
+  background-color: black; /* Darker background color */
+  padding: 20px;
+  border-radius: 10px;
+}
+.banner-content {
+  flex: 1;
+  color: white;
+  padding-right: 20px;
+}
+.banner-subtitle {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.banner-title {
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+.banner-text {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.banner-btn {
+  display: inline-block;
+  background-color: #181717;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  margin-top: 50px;
+}
+.banner-btn:hover {
+  background-color: #181717 ;
+}
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  overflow-x: auto; /* Enable horizontal scrolling if needed */
+}
+.image-container > div {
+  position: relative; /* Establish positioning context */
+}
+.image-container img {
+  border-radius: 6px;
+  width: 250px; /* Adjust this width as needed */
+  height: auto;
+  transition: filter 0.3s; /* Smooth transition effect */
+  margin-right: 10px; /* Space between images */
+}
+.image-container img:hover {
+  filter: brightness(60%); /* Darken the image on hover */
+}
 input{
     display: none;
 }
 .contentpage1 i{
     z-index: 90;
 }
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
+
 .drop-acess-blue, .drop-acess-blue:hover, .drop-acess-blue:focus, .drop-acess-blue:active {
     text-decoration: none;
     color: inherit;
@@ -456,9 +554,6 @@ html, body {
   .newseltter-int{
     display: none;
   }
-  .footer{
-    display: none;
-  }
   .social-media{
     display: none;
   }
@@ -539,6 +634,7 @@ html, body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 500;
   font-size: 35px;
+  display: none;
   cursor: pointer;
 }
 .choix a:visited {border: none; outline: none; text-decoration: none; background-color: transparent; background: transparent; }
@@ -584,13 +680,7 @@ html, body {
 .newseltter-int button{
   display: none!important;
 }
-body{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-}
+
 .txtlaptop{
   color: white;
   width: 40%;
@@ -612,6 +702,12 @@ body{
   position: absolute;
 }
   @media (max-width: 480px) {
+    .container24{
+      display: none;
+    }
+    .container25 {
+      display: none;
+    }
     .main{
       display: flex;
     }
@@ -642,14 +738,16 @@ body{
     }
     .shop{
       display: block;
-      rotate: -90deg !important;
+      writing-mode: vertical-lr; /* Vertical writing mode, rotates text 90 degrees to the left */
+      /*transform: rotate(180deg);  Adjust for correct orientation */
+      rotate: 180deg;
       font-family: "Space Mono", sans-serif;
       font-weight: 400;
       left: 10px;
       font-size: 17px;
       position: absolute;
-      top: 53%;
-      left: 4%;
+      top: 51%;
+      left: 8%;
     }
     .newsletter-int{
       display: block;
@@ -895,6 +993,9 @@ input[name="r"]{
 
 /*=========================INTERACTIVE FOR PHONES==============================*/
 @media screen and (max-width: 480px){
+  .footer{
+    top: 100%!important;
+  }
     body,html{
         overflow-x: hidden;
         height: 100%;

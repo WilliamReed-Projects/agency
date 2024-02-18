@@ -21,7 +21,7 @@ body{
     top: -1px;
     height: 5%;
     width: 100%;
-    border-bottom: 2px solid #333;
+    border-bottom: 3px solid white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,7 +45,7 @@ header{
     top: 5%;
     height: 8%;
     width: 100%;
-    border-bottom:  2px solid #333;
+    border-bottom:  3px solid white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -86,9 +86,6 @@ header img{
     display: block;
     cursor: pointer;
 }
-.phonenav .sectionlogo2{
-  display: none;
-} 
 .button-drop{
     position: absolute;
     width: 200px;
