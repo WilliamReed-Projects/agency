@@ -347,8 +347,8 @@ background-color: black;
 \*-----------------------------------*/
 
 .hero {
-  background-image: url("../images/hero-bg-bottom.png"),
-                    url("../images/hero-bg.png"),
+  background-image: url("../img/hero-bg.png"),
+                    /*url("../img/hero-bg-bottom.png"),*/
                     var(--gradient-1);
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: -280px bottom, center, center;
@@ -611,7 +611,7 @@ background-color: black;
 .footer a { color: inherit; }
 
 .footer-top {
-  background-image: url("{{ url_for('static', filename='css/img/footer-bg.png') }}"), var(--gradient-1);
+  background-image: url("{{ url_for('static', filename='img/footer-bg.png') }}"), var(--gradient-1);
   background-repeat: no-repeat;
   background-size: auto, 200%;
   background-position: center, center;
