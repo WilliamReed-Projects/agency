@@ -1,6 +1,6 @@
 <!-- base.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,12 +16,14 @@
     - custom css link
   -->
   <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='/css/sub-menu.css') }}">
 
   <!-- 
     - google font link
   -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Source+Sans+Pro:wght@600;700&display=swap"
     rel="stylesheet">
@@ -38,13 +40,13 @@
       <div class="overlay" data-overlay></div>
 
       <a href="/">
-        <h1 class="logo">Desinic</h1>
+        <h1 class="logo">WebLevel</h1>
       </a>
 
       <nav class="navbar" data-navbar>
 
         <div class="navbar-top">
-          <a href="#" class="logo">Desinic</a>
+          <a href="#" class="logo">WebLevel</a>
 
           <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
             <ion-icon name="close-outline"></ion-icon>
@@ -58,15 +60,33 @@
           </li>
 
           <li class="navbar-item">
-            <a href="#about" class="navbar-link" data-navbar-link>Prestations</a>
+            <a href="/prestations-web" class="navbar-link" data-navbar-link>Prestations</a>
+            <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+            <ul class="htmlCss-sub-menu sub-menu">
+              <li><a href="#">Web Design</a></li>
+              <li><a href="#">Login Forms</a></li>
+              <li><a href="#">Card Design</a></li>
+              <li class="more">
+                <span><a href="#">More</a>
+                <i class='bx bxs-chevron-right arrow more-arrow'></i>
+              </span>
+                <ul class="more-sub-menu sub-menu">
+                  <li><a href="#">Neumorphism</a></li>
+                  <li><a href="#">Pre-loader</a></li>
+                  <li><a href="#">Glassmorphism</a></li>
+                </ul>
+              </li>
+            </ul>
           </li>
+
+          
 
           <li class="navbar-item">
             <a href="/projets" class="navbar-link" data-navbar-link>Projets</a>
           </li>
 
           <li class="navbar-item">
-            <a href="#features" class="navbar-link" data-navbar-link>Avis</a>
+            <a href="/prestations-graphiques" class="navbar-link" data-navbar-link>Avis</a>
           </li>
 
           <li class="navbar-item">
@@ -74,7 +94,7 @@
           </li>
 
           <li class="navbar-item">
-            <a href="#" class="navbar-link" data-navbar-link>Contact</a>
+            <a href="/contact" class="navbar-link" data-navbar-link>Contact</a>
           </li>
 
         </ul>
@@ -98,8 +118,217 @@
         {% block content %}{% endblock %}
     </main>
 
-    <!-- Add your common JavaScript files here -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="footer-top section">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">WebLevel</a>
+
+          <p class="text">
+            Maecenas pellentesque placerat quam, in finibus nisl tincidunt sed. Aliquam magna augue, malesuada ut
+            feugiat eget,
+            cursus eget felis.
+          </p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Our links</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Home</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">About Us</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Services</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Team</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Blog</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Our Services</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Strategy & Research</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Web Development</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Web Solution</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Digital Marketing</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">App Design</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Other links</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">FAQ</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Portfolio</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Privacy Policy</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Terms & Conditions</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Support</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Contact Us</p>
+          </li>
+
+          <li class="footer-item">
+
+            <div class="footer-item-icon">
+              <ion-icon name="call"></ion-icon>
+            </div>
+
+            <div>
+              <a href="tel:+2484214313" class="footer-item-link">+33 6 49 22 14 47</a>
+              <a href="tel:+2486871365" class="footer-item-link">+33 6 49 22 14 47</a>
+            </div>
+
+          </li>
+
+          <li class="footer-item">
+
+            <div class="footer-item-icon">
+              <ion-icon name="mail"></ion-icon>
+            </div>
+
+            <div>
+              <a href="mailto:info@WebLevel.com" class="footer-item-link">info@WebLevel.com</a>
+              <a href="mailto:help@WebLevel.com" class="footer-item-link">help@WebLevel.com</a>
+            </div>
+
+          </li>
+
+          <li class="footer-item">
+
+            <div class="footer-item-icon">
+              <ion-icon name="location"></ion-icon>
+            </div>
+
+            <address class="footer-item-link">
+              Paris, Ile de France 75017, FRANCE
+            </address>
+
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="copyright">
+        &copy; 2022 <a href="#" class="copyright-link">WebLevel</a>. All Right Reserved
+      </p>
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #GO TO TOP
+  -->
+
+  <a href="#top" class="go-top  active" aria-label="Go To Top" data-go-top>
+    <ion-icon name="arrow-up-outline"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="{{ url_for('static', filename='/js/script.js') }}"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
 </body>
 </html>
